@@ -16,6 +16,9 @@ app.use(express.static("uploads"));
 
 let client;
 
+app.get("/ping", (req,res)=>{
+  res.send("server is working")
+})
 
 app.get("/login", async (req, res) => {
   if (!client) {
